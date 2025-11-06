@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		libksieve
 Summary:	Libksieve
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	7f106dfbbc6b7c22ef391d103639a85a
+# Source0-md5:	310216461ab20545e998c0f9af6b986c
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
@@ -107,13 +107,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKPim6KManageSieve.so.*.*
+%{_libdir}/libKPim6KManageSieve.so.*.*
 %ghost %{_libdir}/libKPim6KManageSieve.so.6
-%attr(755,root,root) %{_libdir}/libKPim6KSieve.so.*.*
+%{_libdir}/libKPim6KSieve.so.*.*
 %ghost %{_libdir}/libKPim6KSieve.so.6
-%attr(755,root,root) %{_libdir}/libKPim6KSieveCore.so.*.*
+%{_libdir}/libKPim6KSieveCore.so.*.*
 %ghost %{_libdir}/libKPim6KSieveCore.so.6
-%attr(755,root,root) %{_libdir}/libKPim6KSieveUi.so.*.*
+%{_libdir}/libKPim6KSieveUi.so.*.*
 %ghost %{_libdir}/libKPim6KSieveUi.so.6
 %{_datadir}/knsrcfiles/ksieve_script.knsrc
 %{_datadir}/qlogging-categories6/libksieve.categories
